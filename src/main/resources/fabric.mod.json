@@ -1,0 +1,44 @@
+	{
+		"schemaVersion": 1,
+		"id": "pathspeed",
+		"version": "${version}",
+		"name": "PathSpeed",
+		"description": "PathSpeed is a Fabric mod for Minecraft that allows server administrators and modpack creators to customize player movement speeds based on the type of blocks they are standing on.",
+		"authors": [
+			"MEGATREX4"
+		],
+		"contact": {
+			"homepage": "https://fabricmc.net/",
+			"sources": "https://github.com/FabricMC/fabric-example-mod"
+		},
+		"license": "CC0-1.0",
+		"icon": "assets/pathspeed/icon.png",
+		"environment": "*",
+		"entrypoints": {
+			"main": [
+				"com.megatrex4.PathSpeed"
+			],
+			"client": [
+				"com.megatrex4.PathSpeedClient"
+			],
+			"fabric-datagen": [
+				"com.megatrex4.PathSpeedDataGenerator"
+			]
+		},
+		"mixins": [
+			"pathspeed.mixins.json",
+			{
+				"config": "pathspeed.client.mixins.json",
+				"environment": "client"
+			}
+		],
+		"depends": {
+			"fabricloader": ">=0.16.3",
+			"minecraft": "~1.21",
+			"java": ">=21",
+			"fabric-api": "*"
+		},
+		"suggests": {
+			"another-mod": "*"
+		}
+	}
