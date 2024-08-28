@@ -1,6 +1,6 @@
 # PathSpeed Mod
 
-PathSpeed is a Minecraft Fabric mod that allows server administrators and modpack creators to customize player movement speeds based on the type of blocks they are standing on. With this mod, you can configure different speed multipliers for various blocks, enhancing gameplay and adding new challenges to your Minecraft world.
+PathSpeed is a Minecraft Fabric mod that allows server administrators and modpack creators to customize player movement speeds based on the type of blocks they are standing on. With this mod, you can configure different speed multipliers for various blocks, enhancing gameplay.
 
 ## Features
 
