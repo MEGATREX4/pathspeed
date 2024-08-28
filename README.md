@@ -1,41 +1,47 @@
-# Random Block Placement Mod
+# PathSpeed Mod
 
-## Overview
-
-The **Random Block Placement Mod** is a Minecraft mod designed to enhance gameplay by introducing a randomized block placement feature. When activated, this mod will randomly select which block to place from your hotbar, adding an element of unpredictability and excitement to block placement.
+PathSpeed is a Minecraft Fabric mod that allows server administrators and modpack creators to customize player movement speeds based on the type of blocks they are standing on. With this mod, you can configure different speed multipliers for various blocks, enhancing gameplay and adding new challenges to your Minecraft world.
 
 ## Features
 
-- **Random Block Selection**: Randomly selects a block from your hotbar when placing blocks.
-- **Toggle Mode**: Easily enable or disable the random placement mode using a configurable keybinding.
-- **HUD Display**: Visual feedback on the screen when the random placement mode is active.
+- **Customizable Movement Speed:** Adjust the speed multipliers for various blocks.
+- **Server Commands:** Reload the configuration without restarting the server.
+- **Easy Configuration:** Use a JSON configuration file to set block speeds.
 
 ## Installation
 
-1. **Download**: Get the latest release from the [Releases](https://github.com/yourusername/random-block-placement/releases) page.
-2. **Install**:
-   - Place the downloaded `.jar` file into your Minecraft `mods` folder.
-   - Make sure you have [Fabric](https://fabricmc.net/) and [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) installed.
-3. **Launch Minecraft**: Start Minecraft with the Fabric loader to see the mod in action.
+1. **Download and Install Fabric:** Ensure you have Fabric installed for Minecraft 1.21+.
+   - [Fabric Installer](https://fabricmc.net/use/)
 
-## Usage
+2. **Download the Mod:** Get the latest version of PathSpeed from the Releases page.
 
-- **Toggle Random Placement**: Press the designated key (default: `R`) to toggle the random block placement mode.
-- **Block Placement**: When the mod is active, blocks will be randomly selected from your hotbar when you place them.
+3. **Place the Mod File:** Move the downloaded `.jar` file into the `mods` folder of your Minecraft directory.
+
+4. **Run Minecraft:** Start Minecraft with the Fabric loader.
 
 ## Configuration
 
-- The mod can be configured via keybindings. Use the in-game controls menu to set your preferred key for toggling the random placement mode.
+PathSpeed uses a JSON configuration file located at `config/movement_speed_config.json`. Here you can set different speed multipliers for blocks. The default configuration includes:
 
-## Contributing
+```json
+{
+  "minecraft:dirt_path": 2.0,
+  "minecraft:sand": 1.0
+}
+```
+Commands
 
-Contributions are welcome! If you have suggestions, bug reports, or want to contribute code, please create an issue or a pull request. Follow these guidelines for contributing:
+    /reloadMovementConfig - Reloads the configuration file without restarting the server.
 
-1. Fork the repository.
-2. Create a new branch for your feature or fix.
-3. Commit your changes.
-4. Push to your forked repository.
-5. Open a pull request to the main repository.
+Usage
 
+Once installed, PathSpeed will automatically adjust player movement speed based on the blocks they are standing on. Use the /reloadMovementConfig command to update the configuration without restarting the server.
+Contributing
 
----
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+    Fork the repository
+    Create a new branch (git checkout -b feature/your-feature)
+    Commit your changes (git commit -am 'Add new feature')
+    Push to the branch (git push origin feature/your-feature)
+    Create a new Pull Request
