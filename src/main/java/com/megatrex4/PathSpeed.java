@@ -38,7 +38,7 @@ public class PathSpeed implements ModInitializer {
 	}
 
 	public void loadOrCreateConfig() {
-		File configFile = new File("config/movement_speed_config.json");
+		File configFile = new File("config/SpeedPath.json");
 
 		if (!configFile.exists()) {
 			LOGGER.info("Config file not found, creating with default values...");
@@ -49,8 +49,8 @@ public class PathSpeed implements ModInitializer {
 	}
 
 	private void createDefaultConfig(File configFile) {
-		blockSpeedMap.put(Identifier.of("minecraft", "dirt_path"), 2.0);
-		blockSpeedMap.put(Identifier.of("minecraft", "sand"), 1.0);
+		blockSpeedMap.put(Identifier.of("minecraft", "dirt_path"), 1.5);
+		blockSpeedMap.put(Identifier.of("namespace", "block_name"), 1.0);
 
 		try (FileWriter writer = new FileWriter(configFile)) {
 			GSON.toJson(blockSpeedMap, writer);
